@@ -1,6 +1,6 @@
-# 🌉 StudyBridge AI: Curriculum-Linked Learning Platform
+# 🌉 Knowledge Gateway AI: Curriculum-Linked Learning Platform
 
-**StudyBridge** is an AI-powered educational platform designed to help students discover logical connections between different academic subjects. Built specifically for the **Ethiopian National Curriculum (Grades 9-12)**, it uses Natural Language Processing to bridge the gap between complex topics in Biology, Chemistry, Physics, and Mathematics.
+** Knowledge Gateway** is an AI-powered educational platform designed to help students discover logical connections between different academic subjects. Built specifically for the **Ethiopian National Curriculum (Grades 9-12)**, it uses Natural Language Processing to bridge the gap between complex topics in Biology, Chemistry, Physics, and Mathematics.
 
 ---
 
@@ -24,19 +24,4 @@
 
 ---
 
-## 📂 Project Structure
 
-```text
-backend/
-├── api/
-│   └── client.js         # Main Server Entry Point
-├── routes/
-│   ├── auth.js           # Signup, Login, OTP & Password Reset
-│   ├── analyze.js        # AI Logic for Topic Bridging
-│   └── search.js         # Database Querying Logic
-├── models/
-│   ├── User.js           # User Schema & Study History
-│   ├── Analysis.js       # AI Results Schema
-│   └── Book.js           # Curriculum Schema
-└── utils/
-    └── sendEmail.js      # Nodemailer Configuration
