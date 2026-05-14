@@ -80,11 +80,11 @@ module.exports = (dbConnection) => {
         recommendations = aiData.links;
       } catch (aiErr) {
         console.error("AI Error:", aiErr.message);
-        aiBrief = Search results for "${q}" found in ${results.length} curriculum units.;
+        aiBrief = `Search results for "${q}" found in ${results.length} curriculum units.`;
         recommendations = [
           {
             title: "Watch on YouTube",
-            url: https://www.youtube.com/results?search_query=Ethiopian+Curriculum+${q},
+            url: `https://www.youtube.com/results?search_query=Ethiopian+Curriculum+${q}`,    
           },
         ];
       }

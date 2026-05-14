@@ -14,7 +14,7 @@ function Dashboard() {
   // --- PROGRESS TRACKING STATE ---
   const [seconds, setSeconds] = useState(0);
   const [stats, setStats] = useState(() => {
-    const saved = localStorage.getItem("studyBridgeStats");
+    const saved = localStorage.getItem("Knowledge GatewayStats");
     return saved
       ? JSON.parse(saved)
       : {
@@ -29,7 +29,7 @@ function Dashboard() {
   // Updated: Only saves if the initial database sync is finished
   useEffect(() => {
     if (!isInitialLoad) {
-      localStorage.setItem("studyBridgeStats", JSON.stringify(stats));
+      localStorage.setItem("Knowledge GatewayStats", JSON.stringify(stats));
     }
   }, [stats, isInitialLoad]);
 
@@ -414,7 +414,7 @@ function Dashboard() {
       <div style={appContainerStyle}>
         <header style={headerStyle}>
           <div style={headerFlexStyle}>
-            <h1 style={titleStyle}>🌐 StudyBridge</h1>
+            <h1 style={titleStyle}>🌐 Knowledge Gateway</h1>
 
             {/* Filter Button */}
             <button

@@ -115,7 +115,7 @@ export default function LoginRegister() {
       <div className="toggle-container">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
-            <h1>Welcome to StudyBridge!</h1>
+            <h1>Welcome to Knowledge Gateway!</h1>
             <p>Already have an account? Login to use all of site features</p>
             <button className="hidden" onClick={() => setActive(false)}>
               Log In

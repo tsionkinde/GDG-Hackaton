@@ -11,7 +11,7 @@ export default function Landing() {
         <div
           style={{ fontSize: "1.8rem", fontWeight: 800, letterSpacing: "-1px" }}
         >
-          StudyBridge
+          Knowledge Gateway
         </div>
         <button
           onClick={() => navigate("/account")}
@@ -83,7 +83,7 @@ export default function Landing() {
             color: "var(--neon-blue)",
           }}
         >
-          Why StudyBridge?
+          Why Knowledge Gateway?
         </h2>
         <p
           style={{
@@ -95,7 +95,7 @@ export default function Landing() {
           }}
         >
           In Ethiopia, students often learn subjects as isolated topics.
-          StudyBridge uses modern visualization and interconnected curricula to
+          Knowledge Gateway uses modern visualization and interconnected curricula to
           show how these subjects work together. Master the Grade 12 National
           Exam by understanding the <b>Science Synergy.</b>
         </p>
@@ -113,7 +113,7 @@ export default function Landing() {
       </section>
 
       <footer className="footer">
-        © 2026 StudyBridge Ethiopia 🇪🇹 • Built for Excellence.
+        © 2026 Knowledge Gateway Ethiopia 🇪🇹 • Built for Excellence.
       </footer>
     </div>
   );
