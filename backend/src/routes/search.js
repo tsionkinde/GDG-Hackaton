@@ -67,9 +67,8 @@ module.exports = (dbConnection) => {
             },
             {
               role: "user",
-              content: `Topic: "${q}". Curriculum context: ${
-                textbookContext || "General Science"
-              }. JSON format: { "description": "...", "bridgeNote": "...", "links": [{"title": "...", "url": "..."}] }`,
+              content: `Topic: "${q}". Curriculum context: ${textbookContext || "General Science"
+                }. JSON format: { "description": "...", "bridgeNote": "...", "links": [{"title": "...", "url": "..."}] }`,
             },
           ],
           response_format: { type: "json_object" },
@@ -84,7 +83,7 @@ module.exports = (dbConnection) => {
         recommendations = [
           {
             title: "Watch on YouTube",
-            url: `https://www.youtube.com/results?search_query=Ethiopian+Curriculum+${q}`,    
+            url: `https://www.youtube.com/results?search_query=Ethiopian+Curriculum+${q}`,
           },
         ];
       }
