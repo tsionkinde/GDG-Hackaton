@@ -67,8 +67,9 @@ module.exports = (dbConnection) => {
             },
             {
               role: "user",
-              content: `Topic: "${q}". Curriculum context: ${textbookContext || "General Science"
-                }. JSON format: { "description": "...", "bridgeNote": "...", "links": [{"title": "...", "url": "..."}] }`,
+              content: `Topic: "${q}". Curriculum context: ${
+                textbookContext || "General Science"
+              }. JSON format: { "description": "...", "bridgeNote": "...", "links": [{"title": "...", "url": "..."}] }`,
             },
           ],
           response_format: { type: "json_object" },
