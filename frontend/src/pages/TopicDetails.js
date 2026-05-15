@@ -9,7 +9,7 @@ export default function TopicDetails() {
 
   async function loadTopic() {
     try {
-      const res = await axios.get(`http://localhost:4000/api/topics/${id}`);
+      const res = await axios.get(`https://gdg-hackaton.onrender.com/api/topics/${id}`);
       setTopic(res.data);
     } catch (err) {
       console.error("Error fetching topic:", err);
@@ -24,7 +24,7 @@ export default function TopicDetails() {
   async function connectTo(targetId) {
     try {
       await axios.post(
-        `http://localhost:4000/api/topics/${id}/connect/${targetId}`
+        `https://gdg-hackaton.onrender.com/api/topics/${id}/connect/${targetId}`
       );
       await loadTopic(); // refresh with new connection
     } catch (err) {

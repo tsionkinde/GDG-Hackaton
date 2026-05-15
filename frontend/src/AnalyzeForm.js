@@ -17,7 +17,7 @@ function AnalyzeForm() {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:5000/analyze", {
+      const response = await fetch("https://gdg-hackaton.onrender.com/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

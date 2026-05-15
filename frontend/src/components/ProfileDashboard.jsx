@@ -24,7 +24,7 @@ function ProfileDashboard() {
 
         console.log("Fetching profile with token:", token);
         axios
-            .get("http://localhost:5000/api/profile", { // Explicit URL to avoid proxy issues
+            .get("https://gdg-hackaton.onrender.com/api/profile", { // Explicit URL to avoid proxy issues
                 headers: { Authorization: `Bearer ${token}` },
             })
             .then((res) => {

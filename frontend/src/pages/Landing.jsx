@@ -11,7 +11,7 @@ export default function Landing() {
         <div
           style={{ fontSize: "1.8rem", fontWeight: 800, letterSpacing: "-1px" }}
         >
-          Knowledge Gateway
+          KnowledgeGateway
         </div>
         <button
           onClick={() => navigate("/account")}
@@ -113,7 +113,7 @@ export default function Landing() {
       </section>
 
       <footer className="footer">
-        © 2026 Knowledge Gateway Ethiopia 🇪🇹 • Built for Excellence.
+        © 2026 KnowledgeGateway Ethiopia 🇪🇹 • Built for Excellence.
       </footer>
     </div>
   );

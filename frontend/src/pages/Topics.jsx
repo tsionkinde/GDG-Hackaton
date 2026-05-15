@@ -6,7 +6,7 @@ function Topics() {
 
   const fetchTopics = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/topics");
+      const res = await fetch("https://gdg-hackaton.onrender.com/api/topics");
       const data = await res.json();
       setTopics(data);
     } catch (err) {
@@ -23,7 +23,7 @@ function Topics() {
   const autoConnect = async () => {
     setLoading(true);
     try {
-      await fetch("http://localhost:4000/api/topics/auto-connect", {
+      await fetch("https://gdg-hackaton.onrender.com/api/topics/auto-connect", {
         method: "POST",
       });
       alert("Auto-connect completed");

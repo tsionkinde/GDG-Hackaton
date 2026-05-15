@@ -19,7 +19,7 @@ const Account = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+      const res = await fetch("https://gdg-hackaton.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
@@ -51,7 +51,7 @@ const Account = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://gdg-hackaton.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -137,7 +137,7 @@ const Account = () => {
       <div className="toggle-container">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
-            <h1>Welcome to StudyBridge!</h1>
+            <h1>Welcome to KnowledgeGateway!</h1>
             <p>Already have an account? Login to use all of site features</p>
             <button
               className="hidden"

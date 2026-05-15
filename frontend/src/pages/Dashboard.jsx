@@ -14,22 +14,22 @@ function Dashboard() {
   // --- PROGRESS TRACKING STATE ---
   const [seconds, setSeconds] = useState(0);
   const [stats, setStats] = useState(() => {
-    const saved = localStorage.getItem("Knowledge GatewayStats");
+    const saved = localStorage.getItem("studyBridgeStats");
     return saved
       ? JSON.parse(saved)
       : {
-          masteredIds: [],
-          searchCount: 0,
-          dailyLog: {},
-          totalMins: 0,
-        };
+        masteredIds: [],
+        searchCount: 0,
+        dailyLog: {},
+        totalMins: 0,
+      };
   });
 
   // 1. SYNC TO LOCAL STORAGE
   // Updated: Only saves if the initial database sync is finished
   useEffect(() => {
     if (!isInitialLoad) {
-      localStorage.setItem("Knowledge GatewayStats", JSON.stringify(stats));
+      localStorage.setItem("studyBridgeStats", JSON.stringify(stats));
     }
   }, [stats, isInitialLoad]);
 
@@ -52,7 +52,7 @@ function Dashboard() {
       const token = localStorage.getItem("token"); // Token from her login logic
       if (token) {
         try {
-          const res = await fetch("http://localhost:5000/api/progress", {
+          const res = await fetch("https://gdg-hackaton.onrender.com/api/progress", {
             headers: {
               "Content-Type": "application/json",
               "x-auth-token": token,
@@ -99,8 +99,8 @@ function Dashboard() {
         [today]: isNowMastered
           ? 1
           : prev.masteredIds.filter((i) => i !== id).length > 0
-          ? 1
-          : 0,
+            ? 1
+            : 0,
       };
 
       return { ...prev, masteredIds: newIds, dailyLog: newLog };
@@ -108,7 +108,7 @@ function Dashboard() {
 
     if (token) {
       try {
-        await fetch("http://localhost:5000/api/progress/toggle", {
+        await fetch("https://gdg-hackaton.onrender.com/api/progress/toggle", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -176,7 +176,7 @@ function Dashboard() {
     setStats((prev) => ({ ...prev, searchCount: prev.searchCount + 1 }));
 
     try {
-      const res = await fetch(`http://localhost:5000/api/search?q=${query}`);
+      const res = await fetch(`https://gdg-hackaton.onrender.com/api/search?q=${query}`);
       const data = await res.json();
 
       if (data.results) {
@@ -274,13 +274,10 @@ function Dashboard() {
               Mathematics: "mathematical logic and quantitative patterns",
             };
 
-            const fallback = `In ${
-              topicObj.subject
-            }, <strong>${cleanLine}</strong> is a core concept focusing on the ${
-              subjectFocus[topicObj.subject] || "fundamental principles"
-            } essential for Grade ${
-              topicObj.grade
-            } students to understand the mechanisms of ${topicObj.unit}.`;
+            const fallback = `In ${topicObj.subject
+              }, <strong>${cleanLine}</strong> is a core concept focusing on the ${subjectFocus[topicObj.subject] || "fundamental principles"
+              } essential for Grade ${topicObj.grade
+              } students to understand the mechanisms of ${topicObj.unit}.`;
 
             defs[`${topicObj.subject}-${topicObj.name}`] =
               combinedDefinitions.length > 0
@@ -404,7 +401,7 @@ function Dashboard() {
             localStorage.removeItem("token");
             localStorage.clear(); // removes everything
             sessionStorage.clear();
-            window.location.href = "http://localhost:5000/account.html";
+            window.location.href = "https://gdg-hackaton.onrender.com/account.html";
           }}
           style={logoutButtonStyle}
         >
@@ -624,7 +621,7 @@ function Dashboard() {
                                 dangerouslySetInnerHTML={{
                                   __html:
                                     topicDefinitions[
-                                      `${item.subject}-${topic}`
+                                    `${item.subject}-${topic}`
                                     ] || "Fetching scientific explanation...",
                                 }}
                                 style={topicDefinitionTextStyle}
@@ -741,7 +738,7 @@ function Dashboard() {
                         <p style={footerRelatedTitleStyle}>RELATED CONCEPTS:</p>
                         <div style={tagCloudWrapperStyle}>
                           {(item.relatedConcepts &&
-                          item.relatedConcepts.length > 0
+                            item.relatedConcepts.length > 0
                             ? item.relatedConcepts
                             : item.matchedTopics || []
                           )

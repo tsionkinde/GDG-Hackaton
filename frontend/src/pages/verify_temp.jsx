@@ -16,7 +16,7 @@ const Verify = () => {
   // --- VERIFY CODE HANDLER ---
   const handleVerifyCode = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/verify-code", {
+      const res = await fetch("https://gdg-hackaton.onrender.com/api/auth/verify-code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, code }),
@@ -46,7 +46,7 @@ const Verify = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/register-complete",
+        "https://gdg-hackaton.onrender.com/api/auth/register-complete",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -19,7 +19,7 @@ function ForgetPassword() {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://gdg-hackaton.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ function ForgetPassword() {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/verify-reset-code",
+        "https://gdg-hackaton.onrender.com/api/auth/verify-reset-code",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -83,7 +83,7 @@ function ForgetPassword() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/auth/reset-password", {
+      const res = await fetch("https://gdg-hackaton.onrender.com/api/auth/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, code, newPassword }),
@@ -127,8 +127,8 @@ function ForgetPassword() {
             step === 1
               ? handleSendCode
               : step === 2
-              ? handleVerifyCode
-              : handleResetPassword
+                ? handleVerifyCode
+                : handleResetPassword
           }
         >
           <h1>
@@ -206,10 +206,10 @@ function ForgetPassword() {
             {loading
               ? "Processing..."
               : step === 1
-              ? "Send Code"
-              : step === 2
-              ? "Verify"
-              : "Reset Password"}
+                ? "Send Code"
+                : step === 2
+                  ? "Verify"
+                  : "Reset Password"}
           </button>
 
           <a
