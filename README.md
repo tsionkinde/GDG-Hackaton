@@ -6,15 +6,15 @@
 
 ## 🚀 Core Features
 
-* **AI-Powered Topic Bridging:** Uses OpenAI's GPT models to analyze Table of Contents and find structural relationships between subjects (e.g., how "Osmosis" in Biology relates to "Pressure" in Physics).
-* **Curriculum-Specific Search:** A deep-search engine that queries a MongoDB Atlas database containing the full Grade 9-12 Ethiopian curriculum.
-* **Secure Passwordless Auth:** Implements a robust authentication system using **OTP (One-Time Passwords)**, Bcrypt hashing, and JWT (JSON Web Tokens).
-* **Progress Tracking:** Automatically saves AI-generated insights and search history to individual user profiles for long-term study.
-* **Resource Mapping:** Recommends curated external resources like Khan Academy and YouTube based on the AI's bridge analysis.
+- **AI-Powered Topic Bridging:** Uses OpenAI's GPT models to analyze Table of Contents and find structural relationships between subjects (e.g., how "Osmosis" in Biology relates to "Pressure" in Physics).
+- **Curriculum-Specific Search:** A deep-search engine that queries a MongoDB Atlas database containing the full Grade 9-12 Ethiopian curriculum.
+- **Secure Passwordless Auth:** Implements a robust authentication system using **OTP (One-Time Passwords)**, Bcrypt hashing, and JWT (JSON Web Tokens).
+- **Progress Tracking:** Automatically saves AI-generated insights and search history to individual user profiles for long-term study.
+- **Resource Mapping:** Recommends curated external resources like Khan Academy and YouTube based on the AI's bridge analysis.
 
 ---
 
-## 🛠️ Technical Stack
+## 🛠️ Technical Stack`
 
 - **Frontend:** React.js, Tailwind CSS (Clean, Responsive UI)
 - **Backend:** Node.js, Express.js
@@ -23,5 +23,3 @@
 - **Security:** JWT, Bcrypt, Nodemailer (OTP Service)
 
 ---
-
-
